@@ -1,0 +1,6 @@
+# Uploaded files are data only - never execute scripts here, never list directory
+<FilesMatch "\.(php|php3|php4|php5|phtml|pl|py|cgi|asp|aspx|sh|exe)$">
+    Require all denied
+</FilesMatch>
+Options -Indexes -ExecCGI
+AddHandler default-handler .php

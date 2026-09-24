@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Allow existing files and directories to load normally
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Send application routes to the front controller
+RewriteRule ^ index.php [L]

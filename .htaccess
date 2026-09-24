@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Do not rewrite requests that are already inside /public
+RewriteRule ^public/ - [L]
+
+# Send all other requests to /public
+RewriteRule ^(.*)$ public/$1 [L]
