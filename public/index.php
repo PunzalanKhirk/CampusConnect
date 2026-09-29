@@ -27,7 +27,7 @@ spl_autoload_register(function ($class) {
             require_once $path;
             return;
         }
-    }
+    }  //yes yes amo nasa
 });
 
 $app = new App();
