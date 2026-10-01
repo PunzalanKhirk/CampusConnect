@@ -263,10 +263,54 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 input:focus, textarea:focus { border-color: var(--accent-primary); }
 
 /* ---------- Auth screen ---------- */
-.auth-body { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: var(--bg-app); }
-.auth-card { width: 380px; max-width: 90vw; padding: 32px; }
+.auth-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
+    background: #add6f8;
+}
+.auth-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    max-width: 100%;
+    min-height: 286px;
+    padding: 12px;
+    background: #e7e6ec;
+    border-radius: 25px;
+    box-shadow: 0 8px 9px rgba(17, 66, 107, 0.28);
+}
 .auth-title { font-size: 20px; margin: 0 0 4px; }
-.auth-subtitle { color: var(--text-secondary); font-size: 13px; margin: 0 0 18px; }
+.auth-brand { display: flex; flex-direction: column; align-items: center; margin-bottom: 6px; }
+.auth-logo { display: block; width: 70px; height: 70px; object-fit: contain; }
+.auth-wordmark { color: #15151c; font-size: 9px; font-style: italic; font-weight: 700; line-height: 1; margin-top: -2px; }
+.auth-subtitle { color: #263448; font-size: 10px; text-align: center; margin: 0 0 12px; }
+.auth-form { width: 100%; }
+.auth-form label { font-size: 10px; margin: 6px 0 2px; }
+.auth-form input[type="email"], .auth-form input[type="password"] {
+    height: 24px;
+    padding: 3px 6px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background: #dedde0;
+    font-size: 11px;
+}
+.auth-submit {
+    display: block;
+    width: 80px;
+    margin: 12px auto 0;
+    padding: 2px 8px;
+    border: 1px solid #555;
+    border-radius: 3px;
+    background: #dedde0;
+    color: var(--text-primary);
+    font-size: 11px;
+    font-weight: 600;
+}
+.auth-card .alert { width: 100%; padding: 7px; font-size: 11px; }
 .alert { padding: 10px 14px; border-radius: var(--radius-md); font-size: 13px; margin-bottom: 14px; }
 .alert-error { background: #fdecec; color: var(--status-deleted); }
 .alert-success { background: #e8f9ef; color: #1a8f52; }
