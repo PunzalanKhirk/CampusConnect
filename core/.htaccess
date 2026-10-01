@@ -1,0 +1,2 @@
+# Deny all direct web access to this folder - it's PHP-included only, never requested directly
+Require all denied

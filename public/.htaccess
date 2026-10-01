@@ -1,0 +1,18 @@
+## CampusConnect - public/.htaccess
+## Routes clean URLs (e.g. /moderation/dashboard) to index.php?url=...
+
+RewriteEngine On
+
+# If a real file or directory is requested (css, js, uploads...), serve it directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Otherwise, route everything through the front controller
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Never allow directory listings
+Options -Indexes
+
+# Hide server signature / sensitive info
+ServerSignature Off
